@@ -14,7 +14,8 @@ export default {
     data(){
         return {
             store,
-            projects: []
+            projects: [],
+            
         }
     },
     created(){
@@ -51,4 +52,3 @@ export default {
 
   
 </style>
-    
