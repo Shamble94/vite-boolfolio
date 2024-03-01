@@ -1,11 +1,19 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+import Projects from "./components/Projects.vue";
+import AppHeader from "./components/AppHeader.vue";
+export default {
+  components: {
+    Projects,
+    AppHeader
+  }
+}
 </script>
 
 <template>
-  
+  <AppHeader />
+  <Projects />
 </template>
 
-<style scoped>
-
+<style  lang="scss">
+@use "./styles/generals.scss"
 </style>
