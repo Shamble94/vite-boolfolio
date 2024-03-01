@@ -3,7 +3,7 @@ export default {
     name: "Projects",
     data(){
         return {
-            projects: []
+            project: []
         }
     }
 }
