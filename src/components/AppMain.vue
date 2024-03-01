@@ -1,12 +1,14 @@
 <script>
-import Projects from "./Projects.vue";
+
+import ProjectCard from "./ProjectCard.vue";
 import { store } from "../store.js"
 import axios from "axios";
 
 export default {
     name: "AppMain",
     components: {
-        Projects
+        
+        ProjectCard
     },
 
     data(){
@@ -21,7 +23,8 @@ export default {
     methods:{
         getProjects(){
             axios.get(`${this.store.baseUrl}/api/projects`).then((response) => {
-                console.log(response.data.results);
+               this.projects = response.data.results.data;
+
             })
         }
     }
@@ -31,13 +34,17 @@ export default {
 <template lang="">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 text-center">
 
                 <h1>Boolfolio</h1>
+                <h4>Raccolta dei progetti </h4>
             </div>
         </div>
+        <div class="row">
+            <ProjectCard v-for="project, index  in projects" :key="index" :project="project"/>
+        </div>
     </div>
-  <Projects />
+  
 </template>
     
 <style  lang="scss" scoped>
