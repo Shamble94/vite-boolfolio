@@ -1,11 +1,11 @@
 <script>
 
-import ProjectCard from "./ProjectCard.vue";
+import ProjectCard from "../components/ProjectCard.vue";
 import { store } from "../store.js"
 import axios from "axios";
 
 export default {
-    name: "AppMain",
+    name: "ProjectsList",
     components: {
         
         ProjectCard
@@ -65,4 +65,4 @@ export default {
 <style  lang="scss" scoped>
 
   
-</style>
+</style>./ProjectsList.vue/index.js

@@ -1,6 +1,12 @@
 <script>
+
+import { store } from "../store.js"
 export default {
-  
+  data(){
+    return{
+        store,
+    }
+  }
 }
 
 </script>
@@ -8,15 +14,17 @@ export default {
 
     <header>
         <div class="container">
-            <div class="row">
+            <div class="row p-2">
                 <div class="col-4">
                     Boolfolio
                 </div>
                 <div class="col-8">
                     <div class="float-end">
-                        <ul class="list-unstyled d-flex align-items-center">
-                            <li><a href="">Home</a></li>
+                        <ul class="list-unstyled d-flex align-items-center gap-4">
+                            <li v-for="item, index in store.menuItems" :key="index"></li>
+                            <router-link :to="{ name: item.name }"> {{ item.label }}</router-link>
                             
+
                         </ul>
                     </div>
                 </div>
