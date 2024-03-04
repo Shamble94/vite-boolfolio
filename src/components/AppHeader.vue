@@ -1,6 +1,7 @@
 <script>
 
-import { store } from "../store.js"
+import { store } from "../store.js";
+
 export default {
   data(){
     return{
@@ -21,9 +22,9 @@ export default {
                 <div class="col-8">
                     <div class="float-end">
                         <ul class="list-unstyled d-flex align-items-center gap-4">
-                            <li v-for="item, index in store.menuItems" :key="index"></li>
-                            <router-link :to="{ name: item.name }"> {{ item.label }}</router-link>
-                            
+                            <li v-for="item, index in store.menuItems" :key="index">
+                                <router-link :to="{ name: item.name }"> {{ item.label }}</router-link>
+                            </li>
 
                         </ul>
                     </div>
