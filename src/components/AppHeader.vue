@@ -14,9 +14,9 @@ export default {
 <template lang="">
 
     <header>
-        <div class="container">
+        <div class="container ">
             <div class="row p-2">
-                <div class="col-4">
+                <div class="col-4 my-2">
                     Boolfolio
                 </div>
                 <div class="col-8">

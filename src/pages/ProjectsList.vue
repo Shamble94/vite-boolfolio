@@ -44,7 +44,7 @@ export default {
 <template lang="">
     <div class="container">
         <div class="row">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center my-3">
 
                 <h1>Boolfolio</h1>
                 <h4>Raccolta dei progetti </h4>
